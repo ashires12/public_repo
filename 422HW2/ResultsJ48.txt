@@ -1,0 +1,279 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     carsData
+Instances:    1728
+Attributes:   7
+              buying
+              maint
+              doors
+              persons
+              lugBoot
+              safety
+              acceptable
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+safety = low: unacc (576.0)
+safety = med
+|   persons = two: unacc (192.0)
+|   persons = four
+|   |   buying = vhigh
+|   |   |   maint = vhigh: unacc (12.0)
+|   |   |   maint = high: unacc (12.0)
+|   |   |   maint = med
+|   |   |   |   lugBoot = small: unacc (4.0)
+|   |   |   |   lugBoot = med: unacc (4.0/2.0)
+|   |   |   |   lugBoot = big: acc (4.0)
+|   |   |   maint = low
+|   |   |   |   lugBoot = small: unacc (4.0)
+|   |   |   |   lugBoot = med: unacc (4.0/2.0)
+|   |   |   |   lugBoot = big: acc (4.0)
+|   |   buying = high
+|   |   |   lugBoot = small: unacc (16.0)
+|   |   |   lugBoot = med
+|   |   |   |   doors = two: unacc (4.0)
+|   |   |   |   doors = three: unacc (4.0)
+|   |   |   |   doors = four: acc (4.0/1.0)
+|   |   |   |   doors = fivemore: acc (4.0/1.0)
+|   |   |   lugBoot = big
+|   |   |   |   maint = vhigh: unacc (4.0)
+|   |   |   |   maint = high: acc (4.0)
+|   |   |   |   maint = med: acc (4.0)
+|   |   |   |   maint = low: acc (4.0)
+|   |   buying = med
+|   |   |   maint = vhigh
+|   |   |   |   lugBoot = small: unacc (4.0)
+|   |   |   |   lugBoot = med: unacc (4.0/2.0)
+|   |   |   |   lugBoot = big: acc (4.0)
+|   |   |   maint = high
+|   |   |   |   lugBoot = small: unacc (4.0)
+|   |   |   |   lugBoot = med: unacc (4.0/2.0)
+|   |   |   |   lugBoot = big: acc (4.0)
+|   |   |   maint = med: acc (12.0)
+|   |   |   maint = low
+|   |   |   |   lugBoot = small: acc (4.0)
+|   |   |   |   lugBoot = med: acc (4.0/2.0)
+|   |   |   |   lugBoot = big: good (4.0)
+|   |   buying = low
+|   |   |   maint = vhigh
+|   |   |   |   lugBoot = small: unacc (4.0)
+|   |   |   |   lugBoot = med: unacc (4.0/2.0)
+|   |   |   |   lugBoot = big: acc (4.0)
+|   |   |   maint = high: acc (12.0)
+|   |   |   maint = med
+|   |   |   |   lugBoot = small: acc (4.0)
+|   |   |   |   lugBoot = med: acc (4.0/2.0)
+|   |   |   |   lugBoot = big: good (4.0)
+|   |   |   maint = low
+|   |   |   |   lugBoot = small: acc (4.0)
+|   |   |   |   lugBoot = med: acc (4.0/2.0)
+|   |   |   |   lugBoot = big: good (4.0)
+|   persons = more
+|   |   lugBoot = small
+|   |   |   buying = vhigh: unacc (16.0)
+|   |   |   buying = high: unacc (16.0)
+|   |   |   buying = med
+|   |   |   |   maint = vhigh: unacc (4.0)
+|   |   |   |   maint = high: unacc (4.0)
+|   |   |   |   maint = med: acc (4.0/1.0)
+|   |   |   |   maint = low: acc (4.0/1.0)
+|   |   |   buying = low
+|   |   |   |   maint = vhigh: unacc (4.0)
+|   |   |   |   maint = high: acc (4.0/1.0)
+|   |   |   |   maint = med: acc (4.0/1.0)
+|   |   |   |   maint = low: acc (4.0/1.0)
+|   |   lugBoot = med
+|   |   |   buying = vhigh
+|   |   |   |   maint = vhigh: unacc (4.0)
+|   |   |   |   maint = high: unacc (4.0)
+|   |   |   |   maint = med: acc (4.0/1.0)
+|   |   |   |   maint = low: acc (4.0/1.0)
+|   |   |   buying = high
+|   |   |   |   maint = vhigh: unacc (4.0)
+|   |   |   |   maint = high: acc (4.0/1.0)
+|   |   |   |   maint = med: acc (4.0/1.0)
+|   |   |   |   maint = low: acc (4.0/1.0)
+|   |   |   buying = med: acc (16.0/5.0)
+|   |   |   buying = low
+|   |   |   |   maint = vhigh: acc (4.0/1.0)
+|   |   |   |   maint = high: acc (4.0)
+|   |   |   |   maint = med: good (4.0/1.0)
+|   |   |   |   maint = low: good (4.0/1.0)
+|   |   lugBoot = big
+|   |   |   buying = vhigh
+|   |   |   |   maint = vhigh: unacc (4.0)
+|   |   |   |   maint = high: unacc (4.0)
+|   |   |   |   maint = med: acc (4.0)
+|   |   |   |   maint = low: acc (4.0)
+|   |   |   buying = high
+|   |   |   |   maint = vhigh: unacc (4.0)
+|   |   |   |   maint = high: acc (4.0)
+|   |   |   |   maint = med: acc (4.0)
+|   |   |   |   maint = low: acc (4.0)
+|   |   |   buying = med
+|   |   |   |   maint = vhigh: acc (4.0)
+|   |   |   |   maint = high: acc (4.0)
+|   |   |   |   maint = med: acc (4.0)
+|   |   |   |   maint = low: good (4.0)
+|   |   |   buying = low
+|   |   |   |   maint = vhigh: acc (4.0)
+|   |   |   |   maint = high: acc (4.0)
+|   |   |   |   maint = med: good (4.0)
+|   |   |   |   maint = low: good (4.0)
+safety = high
+|   persons = two: unacc (192.0)
+|   persons = four
+|   |   buying = vhigh
+|   |   |   maint = vhigh: unacc (12.0)
+|   |   |   maint = high: unacc (12.0)
+|   |   |   maint = med: acc (12.0)
+|   |   |   maint = low: acc (12.0)
+|   |   buying = high
+|   |   |   maint = vhigh: unacc (12.0)
+|   |   |   maint = high: acc (12.0)
+|   |   |   maint = med: acc (12.0)
+|   |   |   maint = low: acc (12.0)
+|   |   buying = med
+|   |   |   maint = vhigh: acc (12.0)
+|   |   |   maint = high: acc (12.0)
+|   |   |   maint = med
+|   |   |   |   lugBoot = small: acc (4.0)
+|   |   |   |   lugBoot = med: acc (4.0/2.0)
+|   |   |   |   lugBoot = big: good (4.0)
+|   |   |   maint = low: good (12.0)
+|   |   buying = low
+|   |   |   maint = vhigh: acc (12.0)
+|   |   |   maint = high
+|   |   |   |   lugBoot = small: acc (4.0)
+|   |   |   |   lugBoot = med: acc (4.0/2.0)
+|   |   |   |   lugBoot = big: good (4.0)
+|   |   |   maint = med: good (12.0)
+|   |   |   maint = low: good (12.0)
+|   persons = more
+|   |   buying = vhigh
+|   |   |   maint = vhigh: unacc (12.0)
+|   |   |   maint = high: unacc (12.0)
+|   |   |   maint = med: acc (12.0/1.0)
+|   |   |   maint = low: acc (12.0/1.0)
+|   |   buying = high
+|   |   |   maint = vhigh: unacc (12.0)
+|   |   |   maint = high: acc (12.0/1.0)
+|   |   |   maint = med: acc (12.0/1.0)
+|   |   |   maint = low: acc (12.0/1.0)
+|   |   buying = med
+|   |   |   maint = vhigh: acc (12.0/1.0)
+|   |   |   maint = high: acc (12.0/1.0)
+|   |   |   maint = med
+|   |   |   |   lugBoot = small: acc (4.0/1.0)
+|   |   |   |   lugBoot = med: good (4.0/1.0)
+|   |   |   |   lugBoot = big: good (4.0)
+|   |   |   maint = low: good (12.0/1.0)
+|   |   buying = low
+|   |   |   maint = vhigh: acc (12.0/1.0)
+|   |   |   maint = high
+|   |   |   |   lugBoot = small: acc (4.0/1.0)
+|   |   |   |   lugBoot = med: good (4.0/1.0)
+|   |   |   |   lugBoot = big: good (4.0)
+|   |   |   maint = med: good (12.0/1.0)
+|   |   |   maint = low: good (12.0/1.0)
+
+Number of Leaves  : 	119
+
+Size of the tree : 	164
+
+
+Time taken to build model: 0.01 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        1612               93.287  %
+Incorrectly Classified Instances       116                6.713  %
+Kappa statistic                          0.8534
+Mean absolute error                      0.0499
+Root mean squared error                  0.1845
+Relative absolute error                 16.4717 %
+Root relative squared error             47.4113 %
+Total Number of Instances             1728     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.962    0.064    0.972      0.962    0.967      0.892    0.983     0.992     unacc
+                 0.870    0.047    0.841      0.870    0.855      0.813    0.965     0.869     acc
+                 0.851    0.013    0.851      0.851    0.851      0.838    0.985     0.829     good
+Weighted Avg.    0.933    0.056    0.934      0.933    0.933      0.870    0.979     0.952     
+
+=== Confusion Matrix ===
+
+    a    b    c   <-- classified as
+ 1164   43    3 |    a = unacc
+   33  334   17 |    b = acc
+    0   20  114 |    c = good
+
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     iris
+Instances:    150
+Attributes:   5
+              sepallength
+              sepalwidth
+              petallength
+              petalwidth
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+petalwidth <= 0.6: Iris-setosa (50.0)
+petalwidth > 0.6
+|   petalwidth <= 1.7
+|   |   petallength <= 4.9: Iris-versicolor (48.0/1.0)
+|   |   petallength > 4.9
+|   |   |   petalwidth <= 1.5: Iris-virginica (3.0)
+|   |   |   petalwidth > 1.5: Iris-versicolor (3.0/1.0)
+|   petalwidth > 1.7: Iris-virginica (46.0/1.0)
+
+Number of Leaves  : 	5
+
+Size of the tree : 	9
+
+
+Time taken to build model: 0 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         144               96      %
+Incorrectly Classified Instances         6                4      %
+Kappa statistic                          0.94  
+Mean absolute error                      0.035 
+Root mean squared error                  0.1586
+Relative absolute error                  7.8705 %
+Root relative squared error             33.6353 %
+Total Number of Instances              150     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.980    0.000    1.000      0.980    0.990      0.985    0.990     0.987     Iris-setosa
+                 0.940    0.030    0.940      0.940    0.940      0.910    0.952     0.880     Iris-versicolor
+                 0.960    0.030    0.941      0.960    0.950      0.925    0.961     0.905     Iris-virginica
+Weighted Avg.    0.960    0.020    0.960      0.960    0.960      0.940    0.968     0.924     
+
+=== Confusion Matrix ===
+
+  a  b  c   <-- classified as
+ 49  1  0 |  a = Iris-setosa
+  0 47  3 |  b = Iris-versicolor
+  0  2 48 |  c = Iris-virginica
+
