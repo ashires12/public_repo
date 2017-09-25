@@ -1,0 +1,15 @@
+  outlook?
+  rainy
+ 	 windy?
+ 	 true
+ 		 	->   no
+ 	 false
+ 		 	->   yes
+  overcast
+ 	 	->   yes
+  sunny
+ 	 humidity?
+ 	 high
+ 		 	->   no
+ 	 normal
+ 		 	->   yes

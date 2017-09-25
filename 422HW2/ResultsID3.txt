@@ -1,0 +1,776 @@
+  outlook?
+  rainy
+ 	 windy?
+ 	 true
+ 		 	->   no
+ 	 false
+ 		 	->   yes
+  overcast
+ 	 	->   yes
+  sunny
+ 	 humidity?
+ 	 high
+ 		 	->   no
+ 	 normal
+ 		 	->   yes
+
+Number of training examples used: 14
+Number correctly classified: 14
+Number of nodes: 8
+Number of Leaves: 5
+
+
+  safety?
+  high
+ 	 persons?
+ 	 four
+ 		 buying?
+ 		 high
+ 			 maint?
+ 			 high
+ 				 	->   acc
+ 			 med
+ 				 	->   acc
+ 			 vhigh
+ 				 	->   unacc
+ 			 low
+ 				 	->   acc
+ 		 med
+ 			 maint?
+ 			 high
+ 				 	->   acc
+ 			 med
+ 				 lugBoot?
+ 				 small
+ 					 	->   acc
+ 				 med
+ 					 doors?
+ 					 four
+ 						 	->   good
+ 					 fivemore
+ 						 	->   good
+ 					 two
+ 						 	->   acc
+ 					 three
+ 						 	->   acc
+ 				 big
+ 					 	->   good
+ 			 vhigh
+ 				 	->   acc
+ 			 low
+ 				 	->   good
+ 		 vhigh
+ 			 maint?
+ 			 high
+ 				 	->   unacc
+ 			 med
+ 				 	->   acc
+ 			 vhigh
+ 				 	->   unacc
+ 			 low
+ 				 	->   acc
+ 		 low
+ 			 maint?
+ 			 high
+ 				 lugBoot?
+ 				 small
+ 					 	->   acc
+ 				 med
+ 					 doors?
+ 					 four
+ 						 	->   good
+ 					 fivemore
+ 						 	->   good
+ 					 two
+ 						 	->   acc
+ 					 three
+ 						 	->   acc
+ 				 big
+ 					 	->   good
+ 			 med
+ 				 	->   good
+ 			 vhigh
+ 				 	->   acc
+ 			 low
+ 				 	->   good
+ 	 two
+ 		 	->   unacc
+ 	 more
+ 		 buying?
+ 		 high
+ 			 maint?
+ 			 high
+ 				 doors?
+ 				 four
+ 					 	->   acc
+ 				 fivemore
+ 					 	->   acc
+ 				 two
+ 					 lugBoot?
+ 					 small
+ 						 	->   unacc
+ 					 med
+ 						 	->   acc
+ 					 big
+ 						 	->   acc
+ 				 three
+ 					 	->   acc
+ 			 med
+ 				 doors?
+ 				 four
+ 					 	->   acc
+ 				 fivemore
+ 					 	->   acc
+ 				 two
+ 					 lugBoot?
+ 					 small
+ 						 	->   unacc
+ 					 med
+ 						 	->   acc
+ 					 big
+ 						 	->   acc
+ 				 three
+ 					 	->   acc
+ 			 vhigh
+ 				 	->   unacc
+ 			 low
+ 				 doors?
+ 				 four
+ 					 	->   acc
+ 				 fivemore
+ 					 	->   acc
+ 				 two
+ 					 lugBoot?
+ 					 small
+ 						 	->   unacc
+ 					 med
+ 						 	->   acc
+ 					 big
+ 						 	->   acc
+ 				 three
+ 					 	->   acc
+ 		 med
+ 			 maint?
+ 			 high
+ 				 doors?
+ 				 four
+ 					 	->   acc
+ 				 fivemore
+ 					 	->   acc
+ 				 two
+ 					 lugBoot?
+ 					 small
+ 						 	->   unacc
+ 					 med
+ 						 	->   acc
+ 					 big
+ 						 	->   acc
+ 				 three
+ 					 	->   acc
+ 			 med
+ 				 lugBoot?
+ 				 small
+ 					 doors?
+ 					 four
+ 						 	->   acc
+ 					 fivemore
+ 						 	->   acc
+ 					 two
+ 						 	->   unacc
+ 					 three
+ 						 	->   acc
+ 				 med
+ 					 doors?
+ 					 four
+ 						 	->   good
+ 					 fivemore
+ 						 	->   good
+ 					 two
+ 						 	->   acc
+ 					 three
+ 						 	->   good
+ 				 big
+ 					 	->   good
+ 			 vhigh
+ 				 doors?
+ 				 four
+ 					 	->   acc
+ 				 fivemore
+ 					 	->   acc
+ 				 two
+ 					 lugBoot?
+ 					 small
+ 						 	->   unacc
+ 					 med
+ 						 	->   acc
+ 					 big
+ 						 	->   acc
+ 				 three
+ 					 	->   acc
+ 			 low
+ 				 doors?
+ 				 four
+ 					 	->   good
+ 				 fivemore
+ 					 	->   good
+ 				 two
+ 					 lugBoot?
+ 					 small
+ 						 	->   unacc
+ 					 med
+ 						 	->   good
+ 					 big
+ 						 	->   good
+ 				 three
+ 					 	->   good
+ 		 vhigh
+ 			 maint?
+ 			 high
+ 				 	->   unacc
+ 			 med
+ 				 doors?
+ 				 four
+ 					 	->   acc
+ 				 fivemore
+ 					 	->   acc
+ 				 two
+ 					 lugBoot?
+ 					 small
+ 						 	->   unacc
+ 					 med
+ 						 	->   acc
+ 					 big
+ 						 	->   acc
+ 				 three
+ 					 	->   acc
+ 			 vhigh
+ 				 	->   unacc
+ 			 low
+ 				 doors?
+ 				 four
+ 					 	->   acc
+ 				 fivemore
+ 					 	->   acc
+ 				 two
+ 					 lugBoot?
+ 					 small
+ 						 	->   unacc
+ 					 med
+ 						 	->   acc
+ 					 big
+ 						 	->   acc
+ 				 three
+ 					 	->   acc
+ 		 low
+ 			 maint?
+ 			 high
+ 				 lugBoot?
+ 				 small
+ 					 doors?
+ 					 four
+ 						 	->   acc
+ 					 fivemore
+ 						 	->   acc
+ 					 two
+ 						 	->   unacc
+ 					 three
+ 						 	->   acc
+ 				 med
+ 					 doors?
+ 					 four
+ 						 	->   good
+ 					 fivemore
+ 						 	->   good
+ 					 two
+ 						 	->   acc
+ 					 three
+ 						 	->   good
+ 				 big
+ 					 	->   good
+ 			 med
+ 				 doors?
+ 				 four
+ 					 	->   good
+ 				 fivemore
+ 					 	->   good
+ 				 two
+ 					 lugBoot?
+ 					 small
+ 						 	->   unacc
+ 					 med
+ 						 	->   good
+ 					 big
+ 						 	->   good
+ 				 three
+ 					 	->   good
+ 			 vhigh
+ 				 doors?
+ 				 four
+ 					 	->   acc
+ 				 fivemore
+ 					 	->   acc
+ 				 two
+ 					 lugBoot?
+ 					 small
+ 						 	->   unacc
+ 					 med
+ 						 	->   acc
+ 					 big
+ 						 	->   acc
+ 				 three
+ 					 	->   acc
+ 			 low
+ 				 doors?
+ 				 four
+ 					 	->   good
+ 				 fivemore
+ 					 	->   good
+ 				 two
+ 					 lugBoot?
+ 					 small
+ 						 	->   unacc
+ 					 med
+ 						 	->   good
+ 					 big
+ 						 	->   good
+ 				 three
+ 					 	->   good
+  med
+ 	 persons?
+ 	 four
+ 		 buying?
+ 		 high
+ 			 lugBoot?
+ 			 small
+ 				 	->   unacc
+ 			 med
+ 				 doors?
+ 				 four
+ 					 maint?
+ 					 high
+ 						 	->   acc
+ 					 med
+ 						 	->   acc
+ 					 vhigh
+ 						 	->   unacc
+ 					 low
+ 						 	->   acc
+ 				 fivemore
+ 					 maint?
+ 					 high
+ 						 	->   acc
+ 					 med
+ 						 	->   acc
+ 					 vhigh
+ 						 	->   unacc
+ 					 low
+ 						 	->   acc
+ 				 two
+ 					 	->   unacc
+ 				 three
+ 					 	->   unacc
+ 			 big
+ 				 maint?
+ 				 high
+ 					 	->   acc
+ 				 med
+ 					 	->   acc
+ 				 vhigh
+ 					 	->   unacc
+ 				 low
+ 					 	->   acc
+ 		 med
+ 			 maint?
+ 			 high
+ 				 lugBoot?
+ 				 small
+ 					 	->   unacc
+ 				 med
+ 					 doors?
+ 					 four
+ 						 	->   acc
+ 					 fivemore
+ 						 	->   acc
+ 					 two
+ 						 	->   unacc
+ 					 three
+ 						 	->   unacc
+ 				 big
+ 					 	->   acc
+ 			 med
+ 				 	->   acc
+ 			 vhigh
+ 				 lugBoot?
+ 				 small
+ 					 	->   unacc
+ 				 med
+ 					 doors?
+ 					 four
+ 						 	->   acc
+ 					 fivemore
+ 						 	->   acc
+ 					 two
+ 						 	->   unacc
+ 					 three
+ 						 	->   unacc
+ 				 big
+ 					 	->   acc
+ 			 low
+ 				 lugBoot?
+ 				 small
+ 					 	->   acc
+ 				 med
+ 					 doors?
+ 					 four
+ 						 	->   good
+ 					 fivemore
+ 						 	->   good
+ 					 two
+ 						 	->   acc
+ 					 three
+ 						 	->   acc
+ 				 big
+ 					 	->   good
+ 		 vhigh
+ 			 maint?
+ 			 high
+ 				 	->   unacc
+ 			 med
+ 				 lugBoot?
+ 				 small
+ 					 	->   unacc
+ 				 med
+ 					 doors?
+ 					 four
+ 						 	->   acc
+ 					 fivemore
+ 						 	->   acc
+ 					 two
+ 						 	->   unacc
+ 					 three
+ 						 	->   unacc
+ 				 big
+ 					 	->   acc
+ 			 vhigh
+ 				 	->   unacc
+ 			 low
+ 				 lugBoot?
+ 				 small
+ 					 	->   unacc
+ 				 med
+ 					 doors?
+ 					 four
+ 						 	->   acc
+ 					 fivemore
+ 						 	->   acc
+ 					 two
+ 						 	->   unacc
+ 					 three
+ 						 	->   unacc
+ 				 big
+ 					 	->   acc
+ 		 low
+ 			 maint?
+ 			 high
+ 				 	->   acc
+ 			 med
+ 				 lugBoot?
+ 				 small
+ 					 	->   acc
+ 				 med
+ 					 doors?
+ 					 four
+ 						 	->   good
+ 					 fivemore
+ 						 	->   good
+ 					 two
+ 						 	->   acc
+ 					 three
+ 						 	->   acc
+ 				 big
+ 					 	->   good
+ 			 vhigh
+ 				 lugBoot?
+ 				 small
+ 					 	->   unacc
+ 				 med
+ 					 doors?
+ 					 four
+ 						 	->   acc
+ 					 fivemore
+ 						 	->   acc
+ 					 two
+ 						 	->   unacc
+ 					 three
+ 						 	->   unacc
+ 				 big
+ 					 	->   acc
+ 			 low
+ 				 lugBoot?
+ 				 small
+ 					 	->   acc
+ 				 med
+ 					 doors?
+ 					 four
+ 						 	->   good
+ 					 fivemore
+ 						 	->   good
+ 					 two
+ 						 	->   acc
+ 					 three
+ 						 	->   acc
+ 				 big
+ 					 	->   good
+ 	 two
+ 		 	->   unacc
+ 	 more
+ 		 buying?
+ 		 high
+ 			 lugBoot?
+ 			 small
+ 				 	->   unacc
+ 			 med
+ 				 maint?
+ 				 high
+ 					 doors?
+ 					 four
+ 						 	->   acc
+ 					 fivemore
+ 						 	->   acc
+ 					 two
+ 						 	->   unacc
+ 					 three
+ 						 	->   acc
+ 				 med
+ 					 doors?
+ 					 four
+ 						 	->   acc
+ 					 fivemore
+ 						 	->   acc
+ 					 two
+ 						 	->   unacc
+ 					 three
+ 						 	->   acc
+ 				 vhigh
+ 					 	->   unacc
+ 				 low
+ 					 doors?
+ 					 four
+ 						 	->   acc
+ 					 fivemore
+ 						 	->   acc
+ 					 two
+ 						 	->   unacc
+ 					 three
+ 						 	->   acc
+ 			 big
+ 				 maint?
+ 				 high
+ 					 	->   acc
+ 				 med
+ 					 	->   acc
+ 				 vhigh
+ 					 	->   unacc
+ 				 low
+ 					 	->   acc
+ 		 med
+ 			 maint?
+ 			 high
+ 				 lugBoot?
+ 				 small
+ 					 	->   unacc
+ 				 med
+ 					 doors?
+ 					 four
+ 						 	->   acc
+ 					 fivemore
+ 						 	->   acc
+ 					 two
+ 						 	->   unacc
+ 					 three
+ 						 	->   acc
+ 				 big
+ 					 	->   acc
+ 			 med
+ 				 doors?
+ 				 four
+ 					 	->   acc
+ 				 fivemore
+ 					 	->   acc
+ 				 two
+ 					 lugBoot?
+ 					 small
+ 						 	->   unacc
+ 					 med
+ 						 	->   acc
+ 					 big
+ 						 	->   acc
+ 				 three
+ 					 	->   acc
+ 			 vhigh
+ 				 lugBoot?
+ 				 small
+ 					 	->   unacc
+ 				 med
+ 					 doors?
+ 					 four
+ 						 	->   acc
+ 					 fivemore
+ 						 	->   acc
+ 					 two
+ 						 	->   unacc
+ 					 three
+ 						 	->   acc
+ 				 big
+ 					 	->   acc
+ 			 low
+ 				 lugBoot?
+ 				 small
+ 					 doors?
+ 					 four
+ 						 	->   acc
+ 					 fivemore
+ 						 	->   acc
+ 					 two
+ 						 	->   unacc
+ 					 three
+ 						 	->   acc
+ 				 med
+ 					 doors?
+ 					 four
+ 						 	->   good
+ 					 fivemore
+ 						 	->   good
+ 					 two
+ 						 	->   acc
+ 					 three
+ 						 	->   good
+ 				 big
+ 					 	->   good
+ 		 vhigh
+ 			 maint?
+ 			 high
+ 				 	->   unacc
+ 			 med
+ 				 lugBoot?
+ 				 small
+ 					 	->   unacc
+ 				 med
+ 					 doors?
+ 					 four
+ 						 	->   acc
+ 					 fivemore
+ 						 	->   acc
+ 					 two
+ 						 	->   unacc
+ 					 three
+ 						 	->   acc
+ 				 big
+ 					 	->   acc
+ 			 vhigh
+ 				 	->   unacc
+ 			 low
+ 				 lugBoot?
+ 				 small
+ 					 	->   unacc
+ 				 med
+ 					 doors?
+ 					 four
+ 						 	->   acc
+ 					 fivemore
+ 						 	->   acc
+ 					 two
+ 						 	->   unacc
+ 					 three
+ 						 	->   acc
+ 				 big
+ 					 	->   acc
+ 		 low
+ 			 maint?
+ 			 high
+ 				 doors?
+ 				 four
+ 					 	->   acc
+ 				 fivemore
+ 					 	->   acc
+ 				 two
+ 					 lugBoot?
+ 					 small
+ 						 	->   unacc
+ 					 med
+ 						 	->   acc
+ 					 big
+ 						 	->   acc
+ 				 three
+ 					 	->   acc
+ 			 med
+ 				 lugBoot?
+ 				 small
+ 					 doors?
+ 					 four
+ 						 	->   acc
+ 					 fivemore
+ 						 	->   acc
+ 					 two
+ 						 	->   unacc
+ 					 three
+ 						 	->   acc
+ 				 med
+ 					 doors?
+ 					 four
+ 						 	->   good
+ 					 fivemore
+ 						 	->   good
+ 					 two
+ 						 	->   acc
+ 					 three
+ 						 	->   good
+ 				 big
+ 					 	->   good
+ 			 vhigh
+ 				 lugBoot?
+ 				 small
+ 					 	->   unacc
+ 				 med
+ 					 doors?
+ 					 four
+ 						 	->   acc
+ 					 fivemore
+ 						 	->   acc
+ 					 two
+ 						 	->   unacc
+ 					 three
+ 						 	->   acc
+ 				 big
+ 					 	->   acc
+ 			 low
+ 				 lugBoot?
+ 				 small
+ 					 doors?
+ 					 four
+ 						 	->   acc
+ 					 fivemore
+ 						 	->   acc
+ 					 two
+ 						 	->   unacc
+ 					 three
+ 						 	->   acc
+ 				 med
+ 					 doors?
+ 					 four
+ 						 	->   good
+ 					 fivemore
+ 						 	->   good
+ 					 two
+ 						 	->   acc
+ 					 three
+ 						 	->   good
+ 				 big
+ 					 	->   good
+  low
+ 	 	->   unacc
+
+Number of training examples used: 1728
+Number correctly classified: 1728
+Number of nodes: 375
+Number of Leaves: 272
