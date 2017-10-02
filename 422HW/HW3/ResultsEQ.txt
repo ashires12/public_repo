@@ -1,14 +1,14 @@
 INFORMATION
 ==================
-Learning rate = .2 
+Learning rate = .25 
 Number of training data = 4 
-Number of iterations = 20 
+Number of iterations = 25 
 
 PRIOR TO TRAINING:
 ==================
 Confusion Matrix: 
-[[ 1.  0.]
- [ 2.  1.]]
+[[ 0.  0.]
+ [ 2.  2.]]
 
 Number classified correctly: 
 2.0 out of 4.0
@@ -16,21 +16,21 @@ Number classified correctly:
 START AND END WEIGHTS:
 ======================
 Initial weights:
-[[-0.16048321]
- [-0.15423894]
- [ 0.41338648]]
+[[-0.24480659]
+ [-0.21470222]
+ [ 0.46045939]]
 
 Final weights:
-[[ 0.23951679]
- [ 0.24576106]
- [ 0.41338648]]
+[[-0.24480659]
+ [-0.21470222]
+ [ 0.46045939]]
 
 AFTER TRAINING:
 ===============
 Confusion Matrix: 
-[[ 3.  0.]
- [ 0.  1.]]
+[[ 2.  2.]
+ [ 0.  0.]]
 
 Number classified correctly: 
-4.0 out of 4.0
+2.0 out of 4.0
 
