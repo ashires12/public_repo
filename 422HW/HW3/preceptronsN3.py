@@ -1,4 +1,4 @@
-#used for number two
+#used for number three
 import numpy as np
 
 class pcn:

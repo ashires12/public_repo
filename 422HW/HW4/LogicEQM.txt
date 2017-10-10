@@ -1,0 +1,25 @@
+INFORMATION
+==================
+Learning rate is .25, number of training data is 4, number of iterations are 5001
+PRIOR TO TRAINING:
+==================
+Confusion Matrix: 
+[[ 2.  2.]
+ [ 0.  0.]]
+Number classified correctly: 2.0 out of 4.0
+START AND END WEIGHTS:
+======================
+Iteration:  0  Error:  0.503734094034  Weights:
+[[-0.48008449]
+ [-0.20890285]
+ [-0.10805281]]
+Iteration:  5000  Error:  0.000213249227717  Weights:
+[[-10.38119796]
+ [ 10.19088215]
+ [  4.89113891]]
+AFTER TRAINING:
+===============
+Confusion Matrix: 
+[[ 2.  0.]
+ [ 0.  2.]]
+Number classified correctly: 4.0 out of 4.0

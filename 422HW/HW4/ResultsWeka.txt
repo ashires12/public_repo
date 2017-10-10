@@ -1,0 +1,124 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.MultilayerPerceptron -L 0.4 -M 0.4 -N 375 -V 0 -S 0 -E 20 -H a
+Relation:     diabetes
+Instances:    768
+Attributes:   9
+              preg
+              plas
+              pres
+              skin
+              insu
+              mass
+              pedi
+              age
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Sigmoid Node 0
+    Inputs    Weights
+    Threshold    -1.52658191515518
+    Node 2    3.5505634438337306
+    Node 3    -7.320138791228479
+    Node 4    2.3379534278484475
+    Node 5    2.4693186004394687
+    Node 6    -2.145765175967714
+Sigmoid Node 1
+    Inputs    Weights
+    Threshold    1.5265818226388614
+    Node 2    -3.550562735173406
+    Node 3    7.320132295430741
+    Node 4    -2.33795337281453
+    Node 5    -2.4693186123041846
+    Node 6    2.1457652531669837
+Sigmoid Node 2
+    Inputs    Weights
+    Threshold    1.3058062493022558
+    Attrib preg    2.473563352527718
+    Attrib plas    -12.304780835867705
+    Attrib pres    -11.471906679997682
+    Attrib skin    3.657616482844961
+    Attrib insu    0.8086049465403168
+    Attrib mass    -7.8027476019684014
+    Attrib pedi    -8.889298991112895
+    Attrib age    13.476575784090578
+Sigmoid Node 3
+    Inputs    Weights
+    Threshold    1.7645977703873055
+    Attrib preg    8.841275504980437
+    Attrib plas    -4.197269711660729
+    Attrib pres    -7.071313630518582
+    Attrib skin    -0.4307395513929289
+    Attrib insu    7.254569292292588
+    Attrib mass    -1.8600557112003167
+    Attrib pedi    1.0713568488319967
+    Attrib age    3.623565608224223
+Sigmoid Node 4
+    Inputs    Weights
+    Threshold    -8.257946826839511
+    Attrib preg    9.930627305069388
+    Attrib plas    -13.63463894794755
+    Attrib pres    7.773084996203117
+    Attrib skin    -0.19212542737394356
+    Attrib insu    -1.6845722802060041
+    Attrib mass    -7.975267630002143
+    Attrib pedi    -3.6439414562079686
+    Attrib age    -20.835633040593
+Sigmoid Node 5
+    Inputs    Weights
+    Threshold    -1.5253878315128369
+    Attrib preg    -3.101940125334214
+    Attrib plas    -18.447080501236982
+    Attrib pres    3.431230231609906
+    Attrib skin    -4.0548085819571185
+    Attrib insu    8.515587993931392
+    Attrib mass    -6.207970802835045
+    Attrib pedi    -1.4701906042134305
+    Attrib age    -4.98732913410347
+Sigmoid Node 6
+    Inputs    Weights
+    Threshold    -4.97906705053799
+    Attrib preg    15.430333749214771
+    Attrib plas    3.7702409561937253
+    Attrib pres    -6.640638332781809
+    Attrib skin    -2.7417348106107626
+    Attrib insu    -0.5226154135277269
+    Attrib mass    8.293238232276916
+    Attrib pedi    -0.13375991800842174
+    Attrib age    -12.16000400082667
+Class tested_negative
+    Input
+    Node 0
+Class tested_positive
+    Input
+    Node 1
+
+
+Time taken to build model: 0.39 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         585               76.1719 %
+Incorrectly Classified Instances       183               23.8281 %
+Kappa statistic                          0.4621
+Mean absolute error                      0.2904
+Root mean squared error                  0.4277
+Relative absolute error                 63.8925 %
+Root relative squared error             89.74   %
+Total Number of Instances              768
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.846    0.396    0.800      0.846    0.822      0.464    0.785     0.846     tested_negative
+                 0.604    0.154    0.678      0.604    0.639      0.464    0.785     0.647     tested_positive
+Weighted Avg.    0.762    0.311    0.757      0.762    0.758      0.464    0.785     0.777
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 423  77 |   a = tested_negative
+ 106 162 |   b = tested_positive

@@ -22,10 +22,10 @@ class mlp:
         inputs,
         targets,
         nhidden,
+        fid,
         beta=1,
         momentum=0.9,
-        outtype='logistic',
-        fid,
+        outtype='logistic'
         ):
         """ Constructor """
 
@@ -98,13 +98,18 @@ class mlp:
         updatew1 = np.zeros(np.shape(self.weights1))
         updatew2 = np.zeros(np.shape(self.weights2))
 
+        fid = self.fid
+        counter = 0
+
         for n in range(niterations):
 
             self.outputs = self.mlpfwd(inputs)
 
             error = 0.5 * np.sum((self.outputs - targets) ** 2)
-            if np.mod(n, 100) == 0:
-                print 'Iteration: ', n, ' Error: ', error
+            #if np.mod(n, 100) == 0:
+            if (counter == 0 or counter == niterations-1):
+                print >> fid, 'Iteration: ', n, ' Error: ', error, ' Weights:'
+                print >> fid, self.weights2
 
             # Different types of output neurons
 
@@ -117,7 +122,7 @@ class mlp:
                 deltao = (self.outputs - targets) * (self.outputs
                         * -self.outputs + self.outputs) / self.ndata
             else:
-                print 'error'
+                print >> fid, 'error'
 
             deltah = self.hidden * self.beta * (1.0 - self.hidden) \
                 * np.dot(deltao, np.transpose(self.weights2))
@@ -128,6 +133,7 @@ class mlp:
                 + self.momentum * updatew2
             self.weights1 -= updatew1
             self.weights2 -= updatew2
+            counter += 1
 
             # Randomise order of inputs (not necessary for matrix-based calculation)
             # np.random.shuffle(change)
@@ -156,10 +162,12 @@ class mlp:
             return np.transpose(np.transpose(np.exp(outputs))
                                 / normalisers)
         else:
-            print 'error'
+            print >> fid, 'error'
 
     def confmat(self, inputs, targets):
         """Confusion matrix"""
+
+        fid = self.fid
 
         # Add the inputs that match the bias node
 
@@ -185,6 +193,10 @@ class mlp:
                 cm[i, j] = np.sum(np.where(outputs == i, 1, 0)
                                   * np.where(targets == j, 1, 0))
 
-        print 'Confusion matrix is:'
-        print cm
-        print 'Percentage Correct: ', np.trace(cm) / np.sum(cm) * 100
+        #print >> fid, 'Confusion matrix is:'
+        #print >> fid, cm
+        #print >> fid, 'Percentage Correct: ', np.trace(cm) / np.sum(cm) * 100
+
+        print >> fid, "Confusion Matrix: "
+        print >> fid, str(cm)
+        print >> fid, "Number classified correctly: " + str(np.trace(cm)) + " out of " + str(np.sum(cm))

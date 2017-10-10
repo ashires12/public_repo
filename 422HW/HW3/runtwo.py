@@ -4,6 +4,7 @@ import preceptronsN3
 # Get all the values
 
 values = np.loadtxt("diabetes.txt", skiprows=11, delimiter = ",", usecols=[0,1,2,3,4,5,6,7])
+values = (values - values.mean(axis = 0))/values.var(axis=0)
 counter = 1
 tempTestV = []
 tempTrainingV = []
@@ -45,18 +46,15 @@ trainingTargets = np.array(tempTrainingT)
 testTargets = np.reshape(testTargets, (153,1))
 trainingTargets = np.reshape(trainingTargets, (615,1))
 
-# Creation and training
-
-fid = open("Results1.txt","w")
+fid = open("Results2.txt","w")
 nNet = preceptronsN3.pcn(trainingInputs,trainingTargets,fid)
-
 
 print >> fid, "INFORMATION:"
 print >> fid, "============"
 print >> fid, "Number of training examples used: " + str(len(trainingTargets))
 print >> fid, "Number of testing examples used: " + str(len(testTargets))
-print >> fid, "Learning rate: .25"
-print >> fid, "Number of Iterations: 2000" + "\n"
+print >> fid, "Learning rate: .3"
+print >> fid, "Number of Iterations: 3000" + "\n"
 print >> fid, "PRIOR TO TRAINING:"
 print >> fid, "=================="
 print >> fid, "Testing Data"
@@ -64,7 +62,7 @@ nNet.confmat(testInputs,testTargets)
 print >> fid, "Training Data"
 nNet.confmat(trainingInputs,trainingTargets)
 
-nNet.pcntrain(trainingInputs,trainingTargets,.25,2000)
+nNet.pcntrain(trainingInputs,trainingTargets,.3,3000)
 
 print >> fid, "AFTER TRAINING:"
 print >> fid, "==============="
