@@ -1,0 +1,41 @@
+INFORMATION:
+============
+Number of training examples used: 615
+Number of testing examples used: 153
+Learning rate: .001
+Number of Iterations: 1500
+
+PRIOR TO TRAINING:
+==================
+Testing Data
+Confusion Matrix: 
+[[ 82.  54.]
+ [ 11.   6.]]
+Number classified correctly: 88.0 out of 153.0
+Training Data
+Confusion Matrix: 
+[[ 376.  177.]
+ [  31.   31.]]
+Number classified correctly: 407.0 out of 615.0
+Iteration:  0  Error:  70.1763789846  Weights:
+[[-0.34741795]
+ [ 0.43618665]
+ [-0.28834572]
+ [ 0.37123071]]
+Iteration:  1499  Error:  61.4929005452  Weights:
+[[-0.34741795]
+ [ 1.43347907]
+ [-1.20869877]
+ [ 1.36323593]]
+AFTER TRAINING:
+===============
+Testing Data
+Confusion Matrix: 
+[[ 60.  22.]
+ [ 33.  38.]]
+Number classified correctly: 98.0 out of 153.0
+Training Data
+Confusion Matrix: 
+[[ 282.   76.]
+ [ 125.  132.]]
+Number classified correctly: 414.0 out of 615.0
