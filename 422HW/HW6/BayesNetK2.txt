@@ -1,0 +1,153 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.bayes.BayesNet -D -Q weka.classifiers.bayes.net.search.local.K2 -- -P 3 -S BAYES -E weka.classifiers.bayes.net.estimate.SimpleEstimator -- -A 0.5
+Relation:     soybean
+Instances:    683
+Attributes:   36
+              date
+              plant-stand
+              precip
+              temp
+              hail
+              crop-hist
+              area-damaged
+              severity
+              seed-tmt
+              germination
+              plant-growth
+              leaves
+              leafspots-halo
+              leafspots-marg
+              leafspot-size
+              leaf-shread
+              leaf-malf
+              leaf-mild
+              stem
+              lodging
+              stem-cankers
+              canker-lesion
+              fruiting-bodies
+              external-decay
+              mycelium
+              int-discolor
+              sclerotia
+              fruit-pods
+              fruit-spots
+              seed
+              mold-growth
+              seed-discolor
+              seed-size
+              shriveling
+              roots
+              class
+Test mode:    5-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Bayes Network Classifier
+not using ADTree
+#attributes=36 #classindex=35
+Network structure (nodes followed by parents)
+date(7): class
+plant-stand(2): class
+precip(3): class
+temp(3): class
+hail(2): class plant-stand precip
+crop-hist(4): class plant-stand precip
+area-damaged(4): class crop-hist
+severity(3): class precip temp
+seed-tmt(3): class severity precip
+germination(3): class plant-stand seed-tmt
+plant-growth(2): class temp
+leaves(2): class plant-growth
+leafspots-halo(3): class leaves plant-growth
+leafspots-marg(3): class leafspots-halo
+leafspot-size(3): class leafspots-marg
+leaf-shread(2): class temp
+leaf-malf(2): class
+leaf-mild(3): class
+stem(2): class leaf-mild
+lodging(2): class hail plant-growth
+stem-cankers(4): class stem leaf-mild
+canker-lesion(4): class stem plant-growth
+fruiting-bodies(2): class stem
+external-decay(3): class canker-lesion leaves
+mycelium(2): class
+int-discolor(3): class
+sclerotia(2): class
+fruit-pods(4): class stem-cankers leafspot-size
+fruit-spots(5): class fruit-pods plant-growth
+seed(2): class hail fruiting-bodies
+mold-growth(2): class seed
+seed-discolor(2): class seed mold-growth
+seed-size(2): class seed seed-discolor
+shriveling(2): class seed-size
+roots(3): class fruit-pods mold-growth
+class(19):
+LogScore Bayes: -10567.575768160943
+LogScore BDeu: -40654.71580101447
+LogScore MDL: -31837.155586225268
+LogScore ENTROPY: -14107.932300201315
+LogScore AIC: -19540.932300201068
+
+
+Time taken to build model: 0.06 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         646               94.5827 %
+Incorrectly Classified Instances        37                5.4173 %
+Kappa statistic                          0.9407
+Mean absolute error                      0.0071
+Root mean squared error                  0.0615
+Relative absolute error                  7.4254 %
+Root relative squared error             28.0618 %
+Total Number of Instances              683
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     diaporthe-stem-canker
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     charcoal-rot
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     rhizoctonia-root-rot
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     phytophthora-rot
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     brown-stem-rot
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     powdery-mildew
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     downy-mildew
+                 0.935    0.008    0.945      0.935    0.940      0.931    0.998     0.989     brown-spot
+                 1.000    0.003    0.909      1.000    0.952      0.952    1.000     0.991     bacterial-blight
+                 0.900    0.000    1.000      0.900    0.947      0.947    1.000     0.991     bacterial-pustule
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     purple-seed-stain
+                 1.000    0.002    0.978      1.000    0.989      0.988    1.000     1.000     anthracnose
+                 0.900    0.008    0.783      0.900    0.837      0.834    0.999     0.967     phyllosticta-leaf-spot
+                 0.879    0.022    0.860      0.879    0.870      0.849    0.994     0.964     alternarialeaf-spot
+                 0.824    0.017    0.882      0.824    0.852      0.831    0.990     0.950     frog-eye-leaf-spot
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     diaporthe-pod-&-stem-blight
+                 1.000    0.001    0.933      1.000    0.966      0.965    1.000     1.000     cyst-nematode
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     2-4-d-injury
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     herbicide-injury
+Weighted Avg.    0.946    0.007    0.946      0.946    0.946      0.939    0.998     0.986
+
+=== Confusion Matrix ===
+
+  a  b  c  d  e  f  g  h  i  j  k  l  m  n  o  p  q  r  s   <-- classified as
+ 20  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 |  a = diaporthe-stem-canker
+  0 20  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 |  b = charcoal-rot
+  0  0 20  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 |  c = rhizoctonia-root-rot
+  0  0  0 88  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 |  d = phytophthora-rot
+  0  0  0  0 44  0  0  0  0  0  0  0  0  0  0  0  0  0  0 |  e = brown-stem-rot
+  0  0  0  0  0 20  0  0  0  0  0  0  0  0  0  0  0  0  0 |  f = powdery-mildew
+  0  0  0  0  0  0 20  0  0  0  0  0  0  0  0  0  0  0  0 |  g = downy-mildew
+  0  0  0  0  0  0  0 86  0  0  0  1  4  1  0  0  0  0  0 |  h = brown-spot
+  0  0  0  0  0  0  0  0 20  0  0  0  0  0  0  0  0  0  0 |  i = bacterial-blight
+  0  0  0  0  0  0  0  0  2 18  0  0  0  0  0  0  0  0  0 |  j = bacterial-pustule
+  0  0  0  0  0  0  0  0  0  0 20  0  0  0  0  0  0  0  0 |  k = purple-seed-stain
+  0  0  0  0  0  0  0  0  0  0  0 44  0  0  0  0  0  0  0 |  l = anthracnose
+  0  0  0  0  0  0  0  2  0  0  0  0 18  0  0  0  0  0  0 |  m = phyllosticta-leaf-spot
+  0  0  0  0  0  0  0  1  0  0  0  0  0 80 10  0  0  0  0 |  n = alternarialeaf-spot
+  0  0  0  0  0  0  0  2  0  0  0  0  1 12 75  0  1  0  0 |  o = frog-eye-leaf-spot
+  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 15  0  0  0 |  p = diaporthe-pod-&-stem-blight
+  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 14  0  0 |  q = cyst-nematode
+  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 16  0 |  r = 2-4-d-injury
+  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  8 |  s = herbicide-injury
